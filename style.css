@@ -1,0 +1,395 @@
+/* CSS Reset & Variables */
+:root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --container-width: 640px; /* Slightly tighter for that focused blog adherence */
+    --space-unit: 8px;
+    
+    /* Default to Dark Mode */
+    --bg-body: #111111;
+    --text-main: #f3f3f3;       /* Brighter white for better contrast */
+    --text-muted: #a3a3a3;      /* Lighter gray for readability */
+    --text-faint: #666666;
+    --border-subtle: #262626;
+    --border-hover: #404040;
+    --card-bg: #161616;
+    --icon-color: #888;
+    
+    --link-hover: #ffffff;
+    --bg-selection: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode Variables override */
+[data-theme="light"] {
+    --bg-body: #ffffff;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --text-faint: #999999;
+    --border-subtle: #eaeaea;
+    --border-hover: #cccccc;
+    --card-bg: #f9f9f9;
+    --icon-color: #666;
+    
+    --link-hover: #000000;
+    --bg-selection: rgba(0, 0, 0, 0.05);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: var(--bg-selection);
+    color: var(--text-main);
+}
+
+html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 100px 24px 60px; /* More top padding */
+    min-height: 100vh;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    display: flex;
+    flex-direction: column;
+    gap: 56px; /* Increased vertical rhythm */
+    position: relative;
+}
+
+/* Theme Toggle */
+.theme-toggle-btn {
+    position: absolute;
+    top: 0; /* Position above the content */
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--text-main);
+    background-color: var(--border-subtle);
+}
+
+/* Typography */
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: -6px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+    margin-bottom: 24px;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+/* Header & Bio */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-text p {
+    color: var(--text-muted);
+}
+
+.bio-text strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Links Row */
+.links-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 48px;
+}
+
+.link-item {
+    color: var(--text-muted);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.link-item:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.cv-link {
+    margin-left: auto;
+    color: var(--text-main);
+    background: var(--border-subtle);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-link:hover {
+    background: var(--border-hover);
+    color: var(--text-main);
+    transform: translateY(-1px);
+    text-decoration: none; /* No underline for button */
+}
+
+.cv-link:active {
+    transform: translateY(0);
+}
+
+/* Detailed Project Card (Showcase) */
+.showcase-link {
+    display: block; /* Make whole card clickable usually, or just container */
+}
+
+.showcase-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.showcase-link:hover .showcase-card {
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.showcase-image {
+    width: 100%;
+    height: 220px;
+    background-color: var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--icon-color);
+}
+
+.showcase-content {
+    padding: 24px;
+}
+
+.showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.showcase-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.status-badge {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    font-size: 11px;
+    font-weight: 400;
+    padding: 4px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.showcase-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    max-width: 85%;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-faint);
+    font-family: monospace; /* Developer feel */
+}
+
+/* Project List */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increased spacing between items */
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    group: project-item; /* Logic help */
+}
+
+.project-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.project-name {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.1s;
+    /* No direct hover here, controlled by parent */
+}
+
+.project-item:hover .project-name {
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-color: var(--text-muted);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.project-tech {
+    font-size: 13px;
+    color: var(--text-faint);
+    font-family: monospace;
+}
+
+.project-desc-mini {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+/* Footer */
+footer {
+    padding-top: 40px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-faint);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: var(--text-faint);
+}
+
+.footer-socials a:hover {
+    color: var(--text-main); /* Hover effect added */
+}
+
+@media (max-width: 600px) {
+
+    .theme-toggle-btn {
+        top: -80px; /* Position above the content */
+        right: -8px;
+    } 
+
+    h1 {
+        line-height: 2;
+        font-size: 32px; /* Slightly smaller for mobile context */
+    }
+
+    h2 {
+        line-height: 1.2;
+        font-size: 20px;
+    }
+
+    .links-row {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .cv-link {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    /* Stack headers on mobile */
+    .showcase-header, 
+    .project-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .status-badge {
+        /* Optional: move badge to top or keep below title? 
+           User didn't specify, but stacking implies title then badge usually. 
+           Left alignment is safer. */
+        align-self: flex-start; 
+    }
+    
+    .project-tech {
+        /* Ensure tech text wraps nicely if needed */
+        margin-top: 2px; 
+    }
+}
