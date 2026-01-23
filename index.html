@@ -6,7 +6,7 @@
     <title>Hasan Mıhalıçlı</title>
     <meta name="description" content="Makine Mühendisliği ve Yazılım projelerim, SolidWorks otomasyonları ve geliştirdiğim ürünler.">
     
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="./favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,10 +86,17 @@
             margin: 0 0 20px 0;
             line-height: 1.1;
             letter-spacing: -1px;
-            background: linear-gradient(to right, #fff, #999);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    
+            /* Gradyan Metin Ayarları (Düzeltilmiş) */
+            background: -webkit-linear-gradient(to right, #fff, #999); /* Eski WebKit */
+            background: linear-gradient(to right, #fff, #999);         /* Standart */
+    
+            background-clip: text;          /* Standart */
+            -webkit-background-clip: text;  /* Safari & Chrome için şart */
+    
+            color: transparent;             /* Standart şeffaflık */
+            -webkit-text-fill-color: transparent; /* WebKit öncelikli şeffaflık */
+}
 
         .subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 30px; font-weight: 300; }
 
