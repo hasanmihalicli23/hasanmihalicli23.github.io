@@ -3,20 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasan Mıhalıçlı | Mechanical Engineer</title>
+    <title>Hasan Mıhalıçlı</title>
+    <meta name="description" content="Makine Mühendisliği ve Yazılım projelerim, SolidWorks otomasyonları ve geliştirdiğim ürünler.">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4; color: #333; }
-        .container { text-align: center; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { margin-bottom: 10px; font-size: 2.5em; }
-        p { font-size: 1.2em; color: #666; }
-        .contact { margin-top: 20px; font-weight: bold; color: #007bff; }
+        /* --- TEMEL AYARLAR (Adem İlter Dark Mode Tarzı) --- */
+        :root {
+            --bg-color: #0f0f0f;       /* Çok koyu gri (Simsiyah değil) */
+            --text-color: #e5e5e5;     /* Kirli beyaz (Göz yormaz) */
+            --text-muted: #a3a3a3;     /* İkincil yazılar */
+            --accent: #3b82f6;         /* Profesyonel Mavi */
+            --accent-hover: #2563eb;
+            --card-bg: #171717;        /* Kart Arka Planı */
+            --border: #262626;         /* İnce Çizgiler */
+            --success: #10b981;        /* Yeşil (Satış/Onay için) */
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased; /* Yazıları pürüzsüzleştirir */
+        }
+
+        a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        /* --- NAVBAR (Buzlu Cam Efekti) --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            background: rgba(15, 15, 15, 0.85); /* Arkası hafif görünür */
+            backdrop-filter: blur(12px);       /* Buzlu cam */
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: white; }
+        
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+        .nav-link:hover { color: white; }
+
+        /* CV Butonu (Hakan Özkale Tarzı Vurgu) */
+        .btn-cv {
+            background-color: white;
+            color: black !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .btn-cv:hover { background-color: #d4d4d4; transform: translateY(-1px); }
+
+        /* --- HERO BÖLÜMÜ (Giriş) --- */
+        header {
+            padding: 160px 20px 100px; /* Navbar payı */
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left; /* Adem İlter genelde sola dayalı sever */
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, #999);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 30px; font-weight: 300; }
+
+        .social-links { display: flex; gap: 20px; font-size: 1.5rem; }
+        .social-links a:hover { color: var(--accent); transform: scale(1.1); }
+
+        /* --- ÜRÜN KARTI (Maliyet Hesaplama Satışı) --- */
+        .product-wrapper {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: linear-gradient(145deg, #1a1a1a, #202020);
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* "Yeni" etiketi */
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .product-info h2 { margin-top: 0; font-size: 1.8rem; }
+        .product-info p { color: var(--text-muted); font-size: 1rem; margin-bottom: 25px; }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-buy:hover { background-color: var(--accent-hover); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); }
+
+        /* Ürün Görsel Alanı (Placeholder) */
+        .product-visual {
+            min-width: 250px;
+            height: 200px;
+            background: #262626;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 3rem;
+            border: 1px dashed #444;
+        }
+
+        /* --- PROJELER LİSTESİ (Şükrü Furkan Tarzı) --- */
+        .content-section { max-width: 700px; margin: 0 auto 100px; padding: 0 20px; }
+        
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .project-item { margin-bottom: 40px; }
+        .project-item:last-child { margin-bottom: 0; }
+        
+        .project-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; color: white; display: flex; align-items: center; gap: 10px; }
+        .project-desc { color: var(--text-muted); font-size: 1rem; margin-bottom: 12px; }
+        .tech-stack { font-size: 0.85rem; color: #666; font-family: monospace; }
+        
+        .project-link { font-size: 0.9rem; color: var(--accent); font-weight: 500; display: inline-flex; align-items: center; gap: 5px; }
+        .project-link:hover { text-decoration: underline; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid var(--border);
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* MOBİL UYUMLULUK */
+        @media (max-width: 768px) {
+            .product-card { flex-direction: column; text-align: center; padding: 30px; }
+            .product-visual { width: 100%; height: 180px; }
+            nav { padding: 15px 20px; }
+            header { padding-top: 120px; }
+            h1 { font-size: 2.2rem; }
+            .nav-menu { gap: 15px; }
+            .nav-link.desktop-only { display: none; } /* Mobilde bazı linkleri gizleyebiliriz */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hasan Mıhalıçlı</h1>
-        <p><i>Web sitem hazırlanıyor...</i></p>
-        <div class="contact">📧 mail@hasanmihalicli.com</div>
+
+    <nav>
+        <a href="#" class="nav-logo">HM.</a>
+        <div class="nav-menu">
+            <a href="#projeler" class="nav-link">Projeler</a>
+            <a href="https://www.linkedin.com/in/hasanmihalicli23" target="_blank" class="nav-link desktop-only">LinkedIn</a>
+            <a href="mailto:mail@hasanmihalicli.com" class="nav-link">İletişim</a>
+            <a href="#" class="btn-cv">CV İndir</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Mühendislik ve Kodun<br>Kesişim Noktası.</h1>
+        <p class="subtitle">
+            Merhaba, ben Hasan. Makine Mühendisliği okuyor, 
+            <span style="color:white;">SolidWorks API</span>, 
+            <span style="color:white;">Python</span> ve 
+            <span style="color:white;">C#</span> ile endüstriyel otomasyon çözümleri geliştiriyorum.
+        </p>
+        
+        <div class="social-links">
+            <a href="https://github.com/hasanmihalicli23" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i> 💻</a>
+            <a href="https://www.linkedin.com/in/hasanmihalicli23" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i> 👔</a>
+            <a href="mailto:mail@hasanmihalicli.com" title="Email"><i class="fa-solid fa-envelope"></i> 📧</a>
+        </div>
+    </header>
+
+    <div class="product-wrapper">
+        <div class="product-card">
+            <span class="badge">Geliştirme Aşamasında</span>
+            
+            <div class="product-visual">
+                📊
+            </div>
+            
+            <div class="product-info">
+                <h2>Maliyet Hesaplama Pro</h2>
+                <p>İmalat sektörü için geliştirdiğim; hammadde, işçilik ve enerji giderlerini dinamik hesaplayan masaüstü yazılımı.</p>
+                <div class="tech-stack" style="margin-bottom: 20px;">Python • CustomTkinter • PDF Report</div>
+                
+                <a href="#" class="btn-buy">Çok Yakında</a>
+            </div>
+        </div>
     </div>
+
+    <section id="projeler" class="content-section">
+        <h3 class="section-title">Seçilmiş Projeler</h3>
+
+        <div class="project-item">
+            <div class="project-title">SolidWorks Tasarım Otomasyonu</div>
+            <p class="project-desc">Bitirme tezi kapsamında C# ve SolidWorks API kullanılarak geliştirildi. Tekrarlı tasarım süreçlerini otomatikleştirerek süreyi %40 kısalttı.</p>
+            <div class="tech-stack">SolidWorks API • .NET Forms</div>
+            <br>
+            <a href="https://github.com" class="project-link">GitHub'da İncele →</a>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">IoT Akıllı Güvenlik Sistemi</div>
+            <p class="project-desc">PIR sensör ve Arduino kullanılarak hareket algılayan, Python ile ntfy.sh servisine bağlanarak telefona anlık bildirim gönderen sistem.</p>
+            <div class="tech-stack">Arduino (C++) • Python • Streamlit • IoT</div>
+            <br>
+            <a href="https://github.com" class="project-link">Kodu İncele →</a>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Pnomatik Ayıklama Sistemi</div>
+            <p class="project-desc">Konveyör bant üzerindeki 10kg ağırlığındaki kutuların sensör yardımıyla ayrıştırılmasını sağlayan elektro-pnomatik devre tasarımı.</p>
+            <div class="tech-stack">FluidSIM • PLC Mantığı</div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hasan Mıhalıçlı.<br>Mühendislik Tutkusuyla Tasarlandı.</p>
+        <p style="opacity: 0.5; font-size: 0.8rem;">mail@hasanmihalicli.com</p>
+    </footer>
+
 </body>
 </html>
