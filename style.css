@@ -155,8 +155,8 @@ a {
     align-items: center;
     gap: 20px;
     font-size: 16px;
-    border-bottom: 1px solid var(--border-subtle);
     padding-bottom: 48px;
+    /* border-bottom: 1px solid var(--border-subtle); */
 }
 
 .link-item {
