@@ -5,34 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasan Mıhalıçlı</title>
     <meta name="description" content="Hasan Mıhalıçlı - Makine Mühendisi">
-    
     <link rel="icon" type="image/png" href="./favicon_logo.png">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <main class="container">
         
-        <!-- Theme Toggle -->
         <button class="theme-toggle-btn" id="theme-toggle" aria-label="Temayı Değiştir">
-            <!-- Default to Moon (Dark Mode active initially) or Sun if light. 
-                 We will set initial content in JS to be safe, or default to Moon SVG here. -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
         </button>
 
-        <!-- Header Section -->
         <header class="header-section">
             <div class="title-group">
                 <h1>Hasan Mıhalıçlı</h1>
@@ -41,8 +33,7 @@
             
             <section class="bio-text">
                 <p>
-                    Mekanik tasarımı yazılımın gücüyle birleştiriyorum.
-                </br>
+                    Mekanik tasarımı yazılımın gücüyle birleştiriyorum.<br>
                     <strong>Python</strong> ve <strong>SolidWorks API</strong> kullanarak manuel CAD süreçlerini otomatize ediyor, 
                     üretim maliyetlerini anlık hesaplayan ve mühendislik verimliliğini artıran özel masaüstü yazılımları geliştiriyorum. 
                     Klasik mühendislik problemlerine, kod tabanlı modern çözümler üretiyorum.
@@ -50,102 +41,12 @@
             </section>
         </header>
 
-        <!-- Links Section -->
         <nav class="links-row">
-            <a href="https://www.linkedin.com/in/hasanmihalicli23" target="_blank" class="link-item">
-                LinkedIn
-            </a>
-            <a href="https://github.com/hasanmihalicli23" target="_blank" class="link-item">
-                GitHub
-            </a>
-            <a href="mailto:mail@hasanmihalicli.com" class="link-item">
-                Email
-            </a>
-            
-            <a href="https://drive.google.com/file/d/1d6Eby46eqjLlmKeMyQZ5q3fXSt4LnZXh/view?usp=sharing" target="_blank" class="link-item">
-                Resume
-            </a>
+            <a href="https://www.linkedin.com/in/hasanmihalicli23" target="_blank" class="link-item">LinkedIn</a>
+            <a href="https://github.com/hasanmihalicli23" target="_blank" class="link-item">GitHub</a>
+            <a href="mailto:mail@hasanmihalicli.com" class="link-item">Email</a>
+            <a href="https://drive.google.com/file/d/1d6Eby46eqjLlmKeMyQZ5q3fXSt4LnZXh/view?usp=sharing" target="_blank" class="link-item">Resume</a>
         </nav>
-
-        <!-- Showcase Project -->
-        <section style="display: none;">
-            <!-- Başlığı kaldırdık -->
-            <a href="#" class="showcase-link">
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <!-- Placeholder Icon -->
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-header">
-                            <span class="showcase-title">Maliyet Hesaplama Pro</span>
-                            <span class="status-badge">Geliştiriliyor</span>
-                        </div>
-                        <p class="showcase-desc">
-                            İmalat sektörü için geliştirilen; hammadde, işçilik ve enerji giderlerini 
-                            dinamik olarak hesaplayan ve raporlayan masaüstü yazılımı.
-                        </p>
-                        <div class="tech-tags">
-                            <span>Python</span>
-                            <span>CustomTkinter</span>
-                            <span>PDF Report</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </section>
-
-        <!-- Projects -->
-        <section style="display: none;">
-            <h3>Projeler</h3>
-            <div class="project-list">
-                
-                <!-- Project 1 -->
-                <a href="https://github.com" target="_blank" class="project-item">
-                    <div class="project-item-header">
-                        <span class="project-name">SolidWorks Tasarım Otomasyonu</span>
-                        <div class="project-tech">SolidWorks API</div>
-                    </div>
-                    <p class="project-desc-mini">
-                        Tekrarlı tasarım süreçlerini otomatize ederek işlem süresini %40 oranında kısaltan bitirme tezi projesi.
-                    </p>
-                </a>
-
-                <!-- Project 2 -->
-                <a href="https://github.com" target="_blank" class="project-item">
-                    <div class="project-item-header">
-                        <span class="project-name">IoT Akıllı Güvenlik Sistemi</span>
-                        <div class="project-tech">Python • IoT • Arduino</div>
-                    </div>
-                    <p class="project-desc-mini">
-                        PIR sensör ile hareket algılayan ve mobil cihazlara anlık bildirim gönderen güvenlik sistemi.
-                    </p>
-                </a>
-
-                <!-- Project 3 -->
-                <a href="#" class="project-item">
-                    <div class="project-item-header">
-                        <span class="project-name">Pnomatik Ayıklama Sistemi</span>
-                        <div class="project-tech">PLC • FluidSIM</div>
-                    </div>
-                    <p class="project-desc-mini">
-                        Ağırlık sensörleri kullanarak konveyör bant üzerindeki ürünleri ayrıştıran elektro-pnomatik devre tasarımı.
-                    </p>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer style="display: none;">
-            <div class="copyright">
-                &copy; 2026 Hasan Mıhalıçlı
-            </div>
-            <div class="footer-socials">
-                <a href="https://x.com" target="_blank">X (Twitter)</a>
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-            </div>
-        </footer>
 
     </main>
 
@@ -153,29 +54,16 @@
         const toggleBtn = document.getElementById('theme-toggle');
         const html = document.documentElement;
 
-        // SVGs
         const moonSVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
         const sunSVG  = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
 
-        // Check local storage or system preference
         const savedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        function setIcon(theme) {
-            toggleBtn.innerHTML = theme === 'light' ? sunSVG : moonSVG;
-        }
-
         if (savedTheme) {
             html.setAttribute('data-theme', savedTheme);
-            setIcon(savedTheme === 'light' ? 'moon' : 'light'); // If curr is light, show moon. Wait.
-            // Logic: If theme is Light, we want to go Dark, so show Moon icon? 
-            // Usually, icon shows current state OR target state. 
-            // "Sun" icon implies "Switch to Light" or "Current is Light"? 
-            // Most sites: Moon icon = Night mode is OFF (click to enable). Sun icon = Night mode is ON (click to disable).
-            // So if theme is 'light', show Moon. If theme is 'dark', show Sun.
             toggleBtn.innerHTML = savedTheme === 'light' ? moonSVG : sunSVG;
         } else {
-            // Default dark
             if (!systemPrefersDark) {
                 html.setAttribute('data-theme', 'light');
                 toggleBtn.innerHTML = moonSVG;
@@ -188,11 +76,8 @@
         toggleBtn.addEventListener('click', () => {
             const currentTheme = html.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
-            // If new theme is dark, we want to show Sun (to switch back to light).
             toggleBtn.innerHTML = newTheme === 'dark' ? sunSVG : moonSVG;
         });
     </script>
