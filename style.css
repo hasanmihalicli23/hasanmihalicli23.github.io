@@ -188,7 +188,6 @@ a {
     font-size: 15px;
     border-radius: 8px;
     transition: opacity 0.2s ease, transform 0.2s ease;
-    flex-shrink: 0;
     white-space: nowrap;
 }
 
@@ -197,6 +196,27 @@ a {
     color: var(--bg-body);
     text-decoration: none;
     transform: translateY(-1px);
+}
+
+.project-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.guide-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.guide-link:hover {
+    color: var(--text-main);
 }
 
 @media (max-width: 600px) {
@@ -225,6 +245,12 @@ a {
     .project-info {
         align-items: flex-start;
         flex-direction: column;
+        gap: 16px;
+    }
+
+    .project-actions {
+        width: 100%;
+        align-items: center;
         gap: 16px;
     }
 

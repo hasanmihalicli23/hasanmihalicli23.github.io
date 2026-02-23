@@ -1,0 +1,22 @@
+MİZAN - MALİYET HESAPLAMA ARACI (KURULUM REHBERİ)
+-------------------------------------------------
+
+Mizan yazılımını bilgisayarınıza kurmak için aşağıdaki adımları sırayla izleyin:
+
+1. İNDİRME:
+Web sitesindeki "Setup İndir" butonuna tıkladığınızda açılan Google Drive sayfasından sağ üstteki "İndir" simgesine (aşağı ok ve çizgi) tıklayarak Mizan-1.0-win64.msi isimli kurulum dosyasını bilgisayarınıza indirin.
+
+2. KURULUM (SETUP) ve GÜVENLİK UYARISI:
+İndirdiğiniz "Mizan-1.0-win64.msi" dosyasına çift tıklayın. Bilgisayarınızın güvenlik ayarlarına bağlı olarak Windows "Windows Kişisel Bilgisayarınızı Korudu" şeklinde mavi bir uyarı penceresi gösterebilir.
+Bu ekranla karşılaşırsanız "Ek Bilgi" (More Info) yazısına tıklayıp, ardından ortaya çıkan "Yine De Çalıştır" (Run Anyway) butonuna basın. Yazılımımız makineniz için tamamen güvenlidir.
+
+3. ADIMLARI İZLEYİN:
+Açılan kurulum penceresinde standart adımları (Next > Install > Finish) takip ederek kurulumu saniyeler içinde tamamlayabilirsiniz.
+
+4. ÇALIŞTIRMA:
+Kurulum tamamlandıktan sonra masaüstünüze gelen Mizan kısayoluna çift tıklayarak programı doğrudan kullanmaya başlayabilirsiniz. Sistem tamamen hazırdır.
+
+İletişim, geri bildirimleriniz veya olası sorunlarınız için "mail@hasanmihalicli.com" adresine mail atabilirsiniz.
+İyi çalışmalar dilerim.
+
+- Hasan Mıhalıçlı
