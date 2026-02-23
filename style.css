@@ -18,7 +18,9 @@
     --bg-selection: rgba(0, 0, 0, 0.05);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -121,26 +123,19 @@ a {
     text-underline-offset: 4px;
 }
 
-.project-card {
-    margin-top: 16px;
-    padding: 24px;
-    background-color: var(--bg-selection);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
+.project-item {
+    margin-top: 32px;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-.project-card:hover {
-    border-color: var(--text-muted);
-}
-
-.project-card-header {
+.project-info {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .project-logo {
@@ -148,12 +143,19 @@ a {
     height: 56px;
     border-radius: 12px;
     object-fit: cover;
-    background-color: var(--border-subtle);
+    flex-shrink: 0;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .project-title-group {
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
+    gap: 12px;
 }
 
 .project-title-group h3 {
@@ -186,7 +188,8 @@ a {
     font-size: 15px;
     border-radius: 8px;
     transition: opacity 0.2s ease, transform 0.2s ease;
-    align-self: flex-start;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .download-btn:hover {
@@ -199,9 +202,33 @@ a {
 @media (max-width: 600px) {
     .theme-toggle-btn {
         top: -80px;
-    } 
-    h1 { font-size: 32px; }
-    h2 { font-size: 20px; }
-    .links-row { flex-wrap: wrap; }
-    .project-card { padding: 20px; }
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .links-row {
+        flex-wrap: wrap;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .project-info {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .download-btn {
+        width: 100%;
+    }
 }
