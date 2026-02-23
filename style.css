@@ -51,6 +51,43 @@ body {
     position: relative;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container>* {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.theme-toggle-btn {
+    animation-delay: 0.1s;
+}
+
+.header-section {
+    animation-delay: 0.2s;
+}
+
+.links-row {
+    animation-delay: 0.3s;
+}
+
+.project-item {
+    animation-delay: 0.4s;
+}
+
+.footer-section {
+    animation-delay: 0.5s;
+}
+
 .theme-toggle-btn {
     position: absolute;
     top: 0;
@@ -115,12 +152,16 @@ a {
 
 .link-item {
     color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .link-item:hover {
     color: var(--link-hover);
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
 .project-item {
@@ -144,6 +185,12 @@ a {
     border-radius: 12px;
     object-fit: cover;
     flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover .project-logo {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 16px var(--bg-selection);
 }
 
 .project-details {
@@ -222,6 +269,18 @@ a {
     color: var(--text-main);
     background-color: var(--bg-selection);
     text-decoration: none;
+}
+
+.footer-section {
+    padding-top: 24px;
+    margin-top: -16px;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+}
+
+.footer-section p {
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
 @media (max-width: 600px) {
