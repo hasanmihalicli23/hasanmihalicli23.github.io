@@ -202,7 +202,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 12px;
+    gap: 8px;
+    /* Reduced gap from 12px to 8px to bring it closer */
     flex-shrink: 0;
 }
 
@@ -210,13 +211,17 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-muted);
-    transition: color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
 
 .guide-link:hover {
     color: var(--text-main);
+    background-color: var(--bg-selection);
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {
