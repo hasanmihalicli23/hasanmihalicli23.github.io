@@ -38,7 +38,7 @@ html {
 body {
     display: flex;
     justify-content: center;
-    padding: 100px 24px 60px;
+    padding: 100px 24px 0;
     min-height: 100vh;
 }
 
@@ -92,6 +92,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 10;
     background: none;
     border: none;
     cursor: pointer;
@@ -273,7 +274,8 @@ a {
 
 .footer-section {
     padding-top: 24px;
-    margin-top: -16px;
+    padding-bottom: 24px;
+    margin-top: auto;
     border-top: 1px solid var(--border-subtle);
     text-align: center;
 }
