@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizan - Kurulum Rehberi</title>
+    <meta name="description" content="Mizan Maliyet Hesaplama Aracı Kurulum ve Kullanım Rehberi">
+    <link rel="icon" type="image/png" href="./favicon_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-content h3 {
+            color: var(--text-main);
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .guide-content h4 {
+            color: var(--text-main);
+            margin-top: 16px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .guide-content p {
+            margin-bottom: 12px;
+        }
+
+        .guide-content ul,
+        .guide-content ol {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+
+        .guide-content li {
+            margin-bottom: 6px;
+        }
+
+        .guide-content strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .guide-content code {
+            background-color: var(--bg-selection);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .guide-content blockquote {
+            border-left: 3px solid var(--border-subtle);
+            padding-left: 12px;
+            margin: 16px 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 15px;
+        }
+
+        .back-link:hover {
+            color: var(--link-hover);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Temayı Değiştir">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+
+        <a href="index.html" class="back-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Geri Dön
+        </a>
+
+        <header class="header-section" style="gap: 12px;">
+            <div class="title-group">
+                <h1>Mizan</h1>
+                <h2>Kurulum ve Kullanım Rehberi</h2>
+            </div>
+        </header>
+
+        <section class="guide-content bio-text">
+            <h3>1. Kurulum (Setup) İşlemleri</h3>
+            <p>Mizan yazılımını bilgisayarınıza kurmak için aşağıdaki adımları sırayla izleyin:</p>
+            <ol>
+                <li><strong>İndirme:</strong> Ana sayfadaki "Setup İndir" butonuna tıklayarak açılan Google Drive
+                    sayfasından sağ üstteki "İndir" simgesine tıklayıp kurulum dosyasını bilgisayarınıza indirin.</li>
+                <li><strong>Güvenlik Uyarısı:</strong> İndirdiğiniz dosyaya çift tıklayın. Windows "Kişisel
+                    Bilgisayarınızı Korudu" uyarısı verirse <strong>Ek Bilgi</strong> (More Info) yazısına tıklayıp,
+                    ardından <strong>Yine De Çalıştır</strong> (Run Anyway) butonuna basın.</li>
+                <li><strong>Kurulum Adımları:</strong> Standart adımları (Next > Install > Finish) takip ederek kurulumu
+                    saniyeler içinde tamamlayın.</li>
+                <li><strong>Çalıştırma:</strong> Masaüstünüze gelen Mizan kısayoluna çift tıklayarak programı hemen
+                    kullanmaya başlayabilirsiniz.</li>
+            </ol>
+
+            <h3>2. Mizan Hakkında (v2.0 Güncellemesi)</h3>
+            <p>Mizan, işletmelerin ve satış maliyet analistlerinin bütçe yönetimi, üretim maliyet hesabı ve finansal
+                teklif süreçlerini hızlandırmak için geliştirilmiş bir masaüstü uygulamasıdır. Kapsamlı <strong>Malzeme
+                    Kataloğu</strong> özelliğiyle fiyatları anında çekebilir, sac kütle hesabı ve kesim optimizasyonu
+                (nesting) modüllerini kullanabilirsiniz.</p>
+
+            <h4>Yeni Gelen Özellikler:</h4>
+            <ul>
+                <li><strong>Excel'den Katalog Yükleme:</strong> Malzeme listenizi tek bir tıkla Excel'den içeri aktarma.
+                </li>
+                <li><strong>Kesim Optimizasyonu (Nesting):</strong> Fire oranını en aza indiren profil/boru kesim
+                    planlayıcısı.</li>
+                <li><strong>Kütle Hesaplayıcı:</strong> Geometriye göre otomatik ağırlık hesaplama.</li>
+                <li><strong>Gelişmiş Analiz Ekranı:</strong> Maliyet dağılımını gösteren interaktif grafikler.</li>
+                <li><strong>Geri Al (Undo):</strong> <code>Ctrl+Z</code> kısayolu ile işlemleri geri alma.</li>
+            </ul>
+
+            <h3>3. Excel'den Malzeme Kataloğu Yükleme</h3>
+            <p>Hammadde verilerini elle girmek yerine elinizdeki Excel listesini bir kere uygulamaya yükleyebilirsiniz.
+            </p>
+            <ol>
+                <li>Ana ekranda sağ üstteki <strong>Ayarlar</strong> butonuna tıklayın.</li>
+                <li><strong>Görünüm ve Kayıt</strong> sekmesine geçin.</li>
+                <li><strong>Excel'den Malzeme Kataloğu Yükle</strong> butonuna tıklayın.</li>
+                <li>Açılan pencereden malzeme listenizin olduğu Excel'i (<code>.xlsx</code>) seçin.</li>
+            </ol>
+            <blockquote>
+                <strong>⚠️ ÖNEMLİ:</strong> Excel dosyanızın sütun sıralaması şu şekilde olmalıdır:<br><br>
+                <strong>1. Sütun (A):</strong> Malzeme Kodu veya Kategorisi (Örn: ST-001)<br>
+                <strong>2. Sütun (B):</strong> Malzemenin Adı ve Ölçüsü (Örn: DKP Sac 2mm)<br>
+                <strong>3. Sütun (C):</strong> Sadece rakam olarak Birim Fiyatı (Örn: 150.50)<br>
+                <strong>4. Sütun (D) - Opsiyonel:</strong> Para Birimi (TL, USD veya EUR)
+            </blockquote>
+            <p><strong>Sonuç:</strong> Ana ekrana dönüp "Kategori" kutusuna tıkladığınızda kodları görecek, bir kodu
+                seçtiğinizde İsim ve Fiyatının otomatik yazıldığını göreceksiniz.</p>
+
+            <h3>4. Kısayollar ve Kullanım İpuçları</h3>
+            <ul>
+                <li><strong>Ctrl + S:</strong> Mevcut projeyi kaydet (Belirlenen dizine .db olarak)</li>
+                <li><strong>Ctrl + O:</strong> Kayıtlı bir projeyi aç</li>
+                <li><strong>Ctrl + Z:</strong> Yanlışlıkla sildiğiniz veya değiştirdiğiniz bir satırı geri al</li>
+                <li><strong>Del (Delete):</strong> Tablodan seçilen satırı sil</li>
+                <li><strong>Çift Tıklama:</strong> Satırı tabloda düzenleme moduna al</li>
+            </ul>
+
+            <p style="margin-top: 32px; font-size: 14px;">
+                İletişim ve geri bildirimleriniz için: <a href="mailto:mail@hasanmihalicli.com"
+                    style="color: var(--text-main); text-decoration: underline;">mail@hasanmihalicli.com</a>
+            </p>
+        </section>
+
+        <footer class="footer-section">
+            <p>&copy; 2026 Hasan Mıhalıçlı. Tüm hakları saklıdır.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        const moonSVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+        const sunSVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            toggleBtn.innerHTML = savedTheme === 'light' ? moonSVG : sunSVG;
+        } else {
+            if (!systemPrefersDark) {
+                html.setAttribute('data-theme', 'light');
+                toggleBtn.innerHTML = moonSVG;
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                toggleBtn.innerHTML = sunSVG;
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggleBtn.innerHTML = newTheme === 'dark' ? sunSVG : moonSVG;
+        });
+    </script>
+</body>
+
+</html>
